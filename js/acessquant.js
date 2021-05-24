@@ -18,7 +18,7 @@ $.getJSON(filePath, function( data ) {
   });*/ 
   //alert(data.acess);
   numberOfViews=data.acess;
-  $("#counter").text("Acessed "+numberOfViews+" time(s)");
+  $("#counter").text("Acessed "+numberOfViews+" times");
 		
 }); 
 
