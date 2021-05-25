@@ -1,0 +1,5 @@
+version: 0.0
+os: linux
+files:
+  - source: ./demo.html
+    destination: /home/ubuntu/Downloads
