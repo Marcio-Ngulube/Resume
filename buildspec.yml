@@ -4,6 +4,8 @@ phases:
   build:
     commands:
       - mvn clean install
+      - ls
+      - ls target
 
 artifacts:
   files:
