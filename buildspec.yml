@@ -4,3 +4,9 @@ phases:
   build:
     commands:
       - mvn clean install
+
+artifacts:
+  files:
+    - pom.xml
+    - appspec.yml
+  discard-paths: yes
