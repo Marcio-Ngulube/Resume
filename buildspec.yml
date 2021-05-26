@@ -4,9 +4,8 @@ phases:
   build:
     commands:
       - mvn clean install
-      - ls
-      - ls target
 
 artifacts:
   files:
     - target/ceevee-ssl-server-0.0.1-SNAPSHOT.jar
+  discard-paths: yes
