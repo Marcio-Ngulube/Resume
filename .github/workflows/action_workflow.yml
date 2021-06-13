@@ -28,4 +28,5 @@ jobs:
              else
                 echo "$SERVICE is not running"
                 nodemon > /dev/null 2> /dev/null < /dev/null &
+                echo "node running"
              fi
