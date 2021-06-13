@@ -25,7 +25,7 @@ jobs:
              if ps ax | grep -v grep | grep $SERVICE > /dev/null
              then
                   echo "$SERVICE service running, everything is fine"
-	     else
+             else
                 echo "$SERVICE is not running"
                 nodemon > /dev/null 2> /dev/null < /dev/null &
              fi
