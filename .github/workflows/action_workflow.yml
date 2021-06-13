@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ frontend/bugfix/spa_action ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: testing actions
+      uses: appleboy/ssh-action@master
+      with:
+           host: ${{ secrets.ACTION_HOST }}
+           username: ${{ secrets.ACTION_USERNAME }}
+           key: ${{ secrets.RESUME_GITHUB_SECRET }}
+           port: ${{ secrets.ACTION_PORT }}
+           script: |
+             cd deployemnts
+             git pull origin frontend/bugfix/spa_action
+             git status
