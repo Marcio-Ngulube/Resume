@@ -7,7 +7,7 @@ phases:
 
 artifacts:
   files:
-    - target/ceevee-ssl-server-0.0.1-SNAPSHOT.jar
+    - target/*.jar
     - appspec.yml
     - runapp.sh
     - stopapp.sh
