@@ -9,4 +9,3 @@ else
     echo "$SERVICE is not running"
     echo "$SERVICE is not running!" | mail -s "$SERVICE down" root
 fi
-
