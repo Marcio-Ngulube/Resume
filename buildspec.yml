@@ -11,4 +11,5 @@ artifacts:
     - appspec.yml
     - runapp.sh
     - stopapp.sh
+    - Dockerfile
   discard-paths: yes

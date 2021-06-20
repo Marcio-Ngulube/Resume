@@ -1,7 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /ceevee-ssl-server-0.0.1-SNAPSHOT.jar
+  - source: /*.jar
+    destination: /home/ubuntu/app/access/
+  - source: /Dockerfile
     destination: /home/ubuntu/app/access/
 hooks:
   ApplicationStop:

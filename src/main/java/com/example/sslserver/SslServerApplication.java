@@ -1,6 +1,5 @@
 package com.example.sslserver;
 
-import java.util.Date;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
@@ -12,8 +11,7 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
 
 @SpringBootApplication
 @EnableJpaAuditing
@@ -22,7 +20,7 @@ public class SslServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SslServerApplication.class, args);
 	}
-	
+
 	@Bean
 	public EmbeddedServletContainerFactory servletContainer() {
 	  TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
@@ -52,13 +50,5 @@ public class SslServerApplication {
 	}
 
 }
-@RestController
-class SecuredServerController{
-	
-	@RequestMapping("/secured")
-	public String secured(){
-		System.out.println("Inside secured()");
-		return "Hello user !!! : " + new Date();
-	}
-}
+
 

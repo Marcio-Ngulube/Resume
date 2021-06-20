@@ -5,11 +5,11 @@ import com.example.sslserver.view.Acess;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,36 +22,13 @@ import java.util.List;
 })
 public class AcessController {
 
-    private AcessService acessService;
 
     @Autowired
-    public void setAcessService(AcessService acessService) {
-        this.acessService = acessService;
-    }
+    private AcessService acessService;
 
-    @GetMapping("/acessAll")
-    public ResponseEntity<List<Acess>> retrieveMorador() {
-        List<Acess> list = acessService.retrieveAcess();
-        return new ResponseEntity<List<Acess>>(list, HttpStatus.OK);
-    }
-
-    @GetMapping("/acess")
-    public ResponseEntity<Integer> retrieveAcess() {
-         int list = acessService.incrementAcess();
-
-        return new ResponseEntity<Integer>(list, HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/access", method = RequestMethod.GET,
-            produces = { "application/json" }
-    )
+    @GetMapping("/access")
     public String acess() {
-
-        String string = "{\"acess\":"+acessService.incrementAcess()+"}";
-
-        return string;
+        return   "{\"acess\":"+acessService.incrementAcess()+"}";
     }
-
-
 
 }

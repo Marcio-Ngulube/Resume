@@ -12,43 +12,36 @@ import org.springframework.web.servlet.config.annotation.*;
 
 import java.util.List;
 
+
 @Configuration
-public class AppConf implements WebMvcConfigurer {
+public  class AppConf implements WebMvcConfigurer {
 
     @Override
-    public void configurePathMatch(PathMatchConfigurer pathMatchConfigurer) {
-        
-    }
+    public void configurePathMatch(PathMatchConfigurer pathMatchConfigurer) {/*configurePathMatch not final*/}
 
     @Override
-    public void configureContentNegotiation(ContentNegotiationConfigurer contentNegotiationConfigurer) {
-
-    }
-
-    @Override
-    public void configureAsyncSupport(AsyncSupportConfigurer asyncSupportConfigurer) {
-
-    }
+    public void configureContentNegotiation(ContentNegotiationConfigurer contentNegotiationConfigurer)
+    {/*configureContentNegotiation not final*/}
 
     @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer defaultServletHandlerConfigurer) {
-
-    }
-
-    @Override
-    public void addFormatters(FormatterRegistry formatterRegistry) {
-
-    }
+    public void configureAsyncSupport(AsyncSupportConfigurer asyncSupportConfigurer)
+    {/*configureAsyncSupport not final*/}
 
     @Override
-    public void addInterceptors(InterceptorRegistry interceptorRegistry) {
-
-    }
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer defaultServletHandlerConfigurer)
+    {/*configureDefaultServletHandling not final*/}
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry resourceHandlerRegistry) {
+    public void addFormatters(FormatterRegistry formatterRegistry)
+    {/*addFormatters not final*/}
 
-    }
+    @Override
+    public void addInterceptors(InterceptorRegistry interceptorRegistry)
+    {/*addInterceptors not final*/}
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry resourceHandlerRegistry)
+    {/*addResourceHandlers not final*/}
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
@@ -58,44 +51,36 @@ public class AppConf implements WebMvcConfigurer {
     }
 
     @Override
-    public void addViewControllers(ViewControllerRegistry viewControllerRegistry) {
-
-    }
-
-    @Override
-    public void configureViewResolvers(ViewResolverRegistry viewResolverRegistry) {
-
-    }
+    public void addViewControllers(ViewControllerRegistry viewControllerRegistry)
+    {/*addViewControllers not final*/}
 
     @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> list) {
-
-    }
-
-    @Override
-    public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> list) {
-
-    }
+    public void configureViewResolvers(ViewResolverRegistry viewResolverRegistry)
+    {/*configureViewResolvers not final*/}
 
     @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> list) {
-
-    }
-
-    @Override
-    public void extendMessageConverters(List<HttpMessageConverter<?>> list) {
-
-    }
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> list)
+    {/*addArgumentResolvers not final*/}
 
     @Override
-    public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> list) {
-
-    }
+    public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> list)
+    {/*addReturnValueHandlers not final*/}
 
     @Override
-    public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> list) {
+    public void configureMessageConverters(List<HttpMessageConverter<?>> list)
+    {/*configureMessageConverters not final*/}
 
-    }
+    @Override
+    public void extendMessageConverters(List<HttpMessageConverter<?>> list)
+    {/*extendMessageConverters not final*/}
+
+    @Override
+    public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> list)
+    {/*configureHandlerExceptionResolvers not final*/}
+
+    @Override
+    public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> list)
+    {/*extendHandlerExceptionResolvers not final*/}
 
     @Override
     public Validator getValidator() {
@@ -106,4 +91,6 @@ public class AppConf implements WebMvcConfigurer {
     public MessageCodesResolver getMessageCodesResolver() {
         return null;
     }
+
+
 }

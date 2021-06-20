@@ -20,14 +20,14 @@ public class AcessServiceImpl implements AcessService{
 
     @Override
     public int retrieveAcessTimes() {
-        int acess_times=acessRepository.retrieveAcessTimes();
-       if( acess_times == 1) {
+        int acessTimes=acessRepository.retrieveAcessTimes();
+       if( acessTimes == 1) {
         Acess acess=new Acess();
-        acess.setId_do_Acess((long)1);
-        acess.setAcess_times(1);
+        acess.setIdDoAccess((long)1);
+        acess.setAccessTimes(1);
         saveAcess(acess);
        }
-        return acess_times;
+        return acessTimes;
     }
 
     @Override

@@ -15,12 +15,12 @@ public interface AcessRepository extends CrudRepository<Acess, Long> {
     List<Acess> retrieveAcess();
 
 
-    @Query("select coalesce( MAX(d.acess_times) ,1) AS acesstime from Acess d")
+    @Query("select coalesce( MAX(d.accessTimes) ,1) AS acesstime from Acess d")
     int retrieveAcessTimes();
 
     @Transactional
     @Modifying
-    @Query("update Acess set acess_times = acess_times+1")
+    @Query("update Acess set accessTimes = accessTimes+1")
     int incrementAcess ();
 
 }
