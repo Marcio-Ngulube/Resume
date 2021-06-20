@@ -1,9 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /*.jar
-    destination: /home/ubuntu/app/access/
-  - source: /Dockerfile
+  - source: .
     destination: /home/ubuntu/app/access/
 hooks:
   ApplicationStop:
