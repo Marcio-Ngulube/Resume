@@ -1,18 +1,12 @@
 package com.example.sslserver.controler;
 
 import com.example.sslserver.rest.service.AcessService;
-import com.example.sslserver.view.Acess;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @RestController
 @ApiResponses(value = {
