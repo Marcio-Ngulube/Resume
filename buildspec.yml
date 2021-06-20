@@ -8,7 +8,7 @@ phases:
 artifacts:
   files:
     - target/*.jar
-    - appspec.yaml
+    - appspec.yml
     - runapp.sh
     - stopapp.sh
     - Dockerfile
