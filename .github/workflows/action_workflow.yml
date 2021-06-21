@@ -2,7 +2,7 @@ name: CI-Prod
 
 on:
   push:
-    branches: [ master ]
+    branches: [ frontend/main ]
 
 jobs:
   deploy:
