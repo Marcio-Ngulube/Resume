@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ frontend/bugfix/spa_action ]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -18,7 +18,10 @@ jobs:
            port: ${{ secrets.ACTION_PORT }}
            script: |
              cd deployemnts
-             git pull origin frontend/bugfix/spa_action
+             git stash --include-untracked
+             git reset --hard
+             git clean -fd
+             git pull origin frontend/main
              git status
              SERVICE='nodemon'
  
