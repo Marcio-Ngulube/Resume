@@ -21,6 +21,7 @@ public class SslServerApplication {
 		SpringApplication.run(SslServerApplication.class, args);
 	}
 
+	/*
 	@Bean
 	public EmbeddedServletContainerFactory servletContainer() {
 	  TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
@@ -47,7 +48,7 @@ public class SslServerApplication {
 	  connector.setRedirectPort(8443);
 	  
 	  return connector;
-	}
+	}*/
 
 }
 
