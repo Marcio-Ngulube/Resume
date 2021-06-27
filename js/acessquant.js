@@ -7,7 +7,7 @@
 
  //var filePath = 'https://v2.jokeapi.dev/joke/Any'; 
 
-var filePath = 'https://3.80.53.97:8443/access'; 
+var filePath = 'https://xo4ugng2li.execute-api.us-east-1.amazonaws.com/production/access'; 
 
 var numberOfViews=1;
 
